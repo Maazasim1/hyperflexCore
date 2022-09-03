@@ -7,17 +7,17 @@ export default function Sidebar() {
 
     <div  className='flex  justify-center space-x-5'>
         <Link href="https://www.linkedin.com/company/hyperflex-core/">
-            <a className='text-xs' target='_blank'>
+            <a className='text-xs hover:bg-white p-2 hover:text-black' target='_blank'>
             LINKEDIN
             </a>
         </Link>
         <Link href="mailto:mazzasimq1@gmail.com" >
-            <a target='_blank' className='text-xs'>
+            <a target='_blank' className='text-xs hover:bg-white p-2 hover:text-black'>
             EMAIL
             </a>
         </Link>
         <Link href="https://www.linkedin.com/company/hyperflex-core/" >
-            <a target='_blank' className='text-xs'>
+            <a target='_blank' className='text-xs hover:bg-white p-2 hover:text-black'>
             FACEBOOK
             </a>
         </Link>

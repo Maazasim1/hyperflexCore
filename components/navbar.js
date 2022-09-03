@@ -2,8 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 
 export default function Navbar() {
-    return (
-        <div className="flex flex-row p-10 px-16 sticky">
+    return ( 
+        <div className='fixed'>
+
+        <div className="w-[100vw] flex flex-row p-10 px-16 sticky z-10">
             <div className='flex justify-start flex-grow'>
                 <Image
 
@@ -32,6 +34,7 @@ export default function Navbar() {
 
 
 
+        </div>
         </div>
     )
 }
