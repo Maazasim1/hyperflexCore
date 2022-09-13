@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+//import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 
 export default function HeroBanner() {
-    const mountRef=useRef();
-    useEffect(()=>{
-        //Texture
+  const mountRef = useRef();
+  useEffect(() => {
+    //Texture
     const loadingManager = new THREE.LoadingManager()
     loadingManager.onStart = () => {
 
@@ -18,9 +19,32 @@ export default function HeroBanner() {
     const gradientTextures = textureLoader.load('textures/gradients/3.jpg')
     gradientTextures.minFilter = THREE.NearestFilter
     gradientTextures.magFilter = THREE.NearestFilter
+    const modelGroup = new THREE.Group();
 
-    const cubeTextureLoader = new THREE.CubeTextureLoader()
-    //Lights
+    const loader = new GLTFLoader();
+
+    loader.load
+      (
+        //Rescource url
+        'models/melanieBot.gltf',
+        (gltf) => {
+          gltf.scene.traverse((node) => {
+            if (!node.isMesh) return;
+
+            node.material.wireframe = true;
+            node.material.color = new THREE.Color(0x0000ff)
+          });
+          gltf.scene.scale.set(3, 3, 3)
+          modelGroup.add(gltf.scene)
+          var object = gltf.scene
+          const model = gltf.scene.clone();
+          model.applyMatrix4(new THREE.Matrix4().makeScale(-1, 1, 1));
+          
+          modelGroup.add(model)
+          console.log(gltf.scene)
+
+        }
+      )
 
 
     //Font
@@ -35,77 +59,46 @@ export default function HeroBanner() {
 
             {
               font,
-              size: 0.5,
+              size: 1.5,
               height: 0.2,
-              curveSegments: 5,
-              bevelEnabled: true,
+              curveSegments: 1,
+              bevelEnabled: false,
               bevelThickness: 0.03,
               bevelSize: 0.02,
               bevelOffset: 0,
-              bevelSegments: 4
+              bevelSegments: 20
 
             }
           )
 
-        // const pointLight = new THREE.PointLight('white', 0.5)
+        const directionlLight = new THREE.DirectionalLight('white', 2)
+        directionlLight.lookAt(modelGroup)
+        scene.add(directionlLight)
+
+        const light = new THREE.AmbientLight("white", 3)
         textGeometry.center()
-        const material = new THREE.MeshMatcapMaterial()
-        material.color = new THREE.Color('orange')
+        const material = new THREE.MeshStandardMaterial()
+        material.wireframe = true
+        material.color = new THREE.Color('blue')
         material.matcap = matCapTexture
         const text = new THREE.Mesh(textGeometry, material)
-        scene.add(text)
-        // const ambientLight = new THREE.AmbientLight('#b9d5ff', 0.12)
-        // scene.add(ambientLight)
+        modelGroup.add(light)
 
+        scene.add(modelGroup)
 
-        // const directionalLight = new THREE.DirectionalLight('#b9d5ff', 0.12)
-        // directionalLight.position.x = 5;
-        // directionalLight.position.y = 5;
-        // directionalLight.position.z = -2;
-        // scene.add(directionalLight)
-
-        const donutGeometry = new THREE.SphereBufferGeometry(0.3, 0.2, 20, 45)
-        const donutMaterial = new THREE.MeshMatcapMaterial({ color: 'orange', matcap: matCapTexture })
-
-        for (let i = 0; i < 150; i++) {
-          const donut = new THREE.Mesh(donutGeometry, donutMaterial)
-          donut.position.x = Math.random() * 8 - 5
-          donut.position.y = Math.random() * 8 - 5
-          donut.position.z = Math.random() * 8 - 5
-
-          donut.rotation.x = Math.random() * Math.PI
-          donut.rotation.y = Math.random() * Math.PI
-          const scale = Math.random()
-          donut.scale.x = scale
-          donut.scale.y = scale
-          donut.scale.z = scale
-          scene.add(donut)
-        }
       }
     )
-    //Mouse-Movement
-    const cursor = {
-      x: 0,
-      y: 0
-    }
-    window.addEventListener('mousemove', (event) => {
-      cursor.x = event.clientX / size.width - 0.5;
-      cursor.y = -(event.clientY / size.height - 0.35);
-    })
     //scene
     const scene = new THREE.Scene()
     const size = {
       width: window.innerWidth,
       height: window.innerHeight
     }
-
-    const camera = new THREE.PerspectiveCamera(75, size.width / size.height, 0.1, 100)
-    camera.position.z = 5
+    //Camera
+    const camera = new THREE.PerspectiveCamera(75, size.width / size.height)
+    camera.position.z = 15
 
     scene.add(camera)
-
-
-
 
     //Renderer
 
@@ -117,24 +110,30 @@ export default function HeroBanner() {
 
     mountRef.current.appendChild(renderer.domElement);
 
-    const controls = new OrbitControls(camera, renderer.domElement)
-    controls.enableDamping = true;
-    controls.autoRotate = true
+    // const controls = new OrbitControls(camera, renderer.domElement)
+    //controls.enableDamping = true;
+    //controls.autoRotate = false;
 
-    //Detect Double Click
-    window.addEventListener('dblclick', () => {
+    //Move model to look at cursor
+    window.addEventListener('mousemove', (event) => {
+      modelGroup.rotation.y = (event.clientX / window.innerWidth) - 0.5;
+      modelGroup.rotation.x = (event.clientY / window.innerHeight) - 0.5;
 
-      if (!document.fullscreenElement) {
-        renderer.domElement.requestFullscreen();
+      modelGroup.position.x = ((event.clientX / window.innerWidth) - 0.5) * 15;
+      modelGroup.position.y = ((event.clientY / window.innerHeight) - 0.5) * -15;
+    });
 
-      }
-      else if (document.fullscreenElement) {
+    window.addEventListener('resize', onWindowResize, false);
 
-        document.exitFullscreen();
+    function onWindowResize() {
 
-      }
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
 
-    })
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+    }
+
     //Time
     const clock = new THREE.Clock()
     //Animation
@@ -143,7 +142,7 @@ export default function HeroBanner() {
       //Time
       const elapsedTime = clock.getElapsedTime()
       //Render
-      controls.update()
+      // controls.update()
       renderer.render(scene, camera)
       window.requestAnimationFrame(tick)
     }
@@ -154,10 +153,10 @@ export default function HeroBanner() {
     return () => mountRef.current.removeChild(renderer.domElement);
 
 
-    },[])
+  }, [])
 
   return (
-    <div ref={mountRef}>
+    <div className='fixed h-full w-full top-0 left-0' ref={mountRef} style={{ height: "100%" }}>
 
     </div>
   )

@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Sidebar() {
   return (
-    <div className='fixed -left-16 top-64 -rotate-90'>
+    <div className='fixed -left-16 top-64 -rotate-90 z-10'>
 
     <div  className='flex  justify-center space-x-5'>
         <Link href="https://www.linkedin.com/company/hyperflex-core/">
