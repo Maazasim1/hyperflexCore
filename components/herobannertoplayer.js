@@ -29,6 +29,7 @@ export default function Herobannertoplayer() {
                     slogans.map((slogan,i)=>{
                         return(
                             <motion.li
+                            key={i}
                             initial={{y:0}}
                             animate={{y:[0,-170,0]}}
                             transition={{ease:"linear",duration:5,repeat:Infinity }}
