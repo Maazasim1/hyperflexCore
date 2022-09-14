@@ -6,7 +6,7 @@ export default function Navbar() {
         <div>
             <div className='fixed top-0 w-full z-10'>
 
-                <div className="w-[100vw] flex flex-row p-10 px-16 sticky z-10">
+                <div className="w-[100vw] flex flex-row p-10 px-16 sticky z-50">
                     <div className='flex justify-start flex-grow'>
                         <Image
 
@@ -31,7 +31,7 @@ export default function Navbar() {
                             CLIENTS
                         </a>
                         <a className='bg-gradient-to-r from-orange-500 to-blue-700 p-4 ml-14  rounded-md text-white font-poppins font-bold'>
-                            Book Consultation
+                            Book Free Consultation
                         </a>
 
                     </div>
