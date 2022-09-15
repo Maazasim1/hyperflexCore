@@ -10,27 +10,28 @@ export default function Navbar() {
                     <div className='flex justify-start flex-grow'>
                         <Image
 
-                            src="/images/Logo.png"
-                            width={50}
-                            height={50}
+                            src="/images/Logo.webp"
+                            width={64}
+                            height={60}
+                            alt='hyperflex core logo'
                         />
 
-                        <a className='pl-10 pt-3 font-poppins font-extrabold'>
+                        <a href='#' className='pl-10 pt-3 font-poppins font-extrabold'>
                             HYPERFLEX CORE
                         </a>
                     </div>
                     <div className='flex justify-end'>
 
-                        <a className='pt-4 pl-5 font-poppins font-extrabold'>
+                        <a href='#Services' className='pt-4 pl-5 font-poppins font-extrabold'>
                             SERVICES
                         </a>
-                        <a className='pt-4 pl-5 font-poppins font-extrabold'>
+                        <a href='#Portfolio' className='pt-4 pl-5 font-poppins font-extrabold'>
                             PORTFOLIO
                         </a>
-                        <a className='pt-4 pl-5 font-poppins font-extrabold'>
+                        <a href='#Clients' className='pt-4 pl-5 font-poppins font-extrabold'>
                             CLIENTS
                         </a>
-                        <a className='bg-gradient-to-r from-orange-500 to-blue-700 p-4 ml-14  rounded-md text-white font-poppins font-bold'>
+                        <a href='#Consultation' className='bg-gradient-to-r from-orange-500 to-blue-700 p-4 ml-14  rounded-md text-white font-poppins font-bold'>
                             Book Free Consultation
                         </a>
 
