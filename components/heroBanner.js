@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 
 export default function HeroBanner() {
   const mountRef = useRef();
@@ -8,11 +9,14 @@ export default function HeroBanner() {
     const modelGroup = new THREE.Group();
 
     const loader = new GLTFLoader();
+    const compressed = new DRACOLoader();
+    compressed.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
+    loader.setDRACOLoader(compressed)
 
     loader.load
       (
         //Rescource url
-        'models/melanieBot.gltf',
+        'models/melanieDraco.gltf',
         (gltf) => {
           gltf.scene.traverse((node) => {
             if (!node.isMesh) return;
