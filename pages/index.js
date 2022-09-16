@@ -5,6 +5,7 @@ import Progress from "../components/progressBar"
 import Herobannertoplayer from "../components/herobannertoplayer"
 import Head from "next/head"
 import Services from "../components/services"
+import Portfolio from "../components/portfolio"
 export default function Home() {
   return (
     <div className="">
@@ -20,6 +21,7 @@ export default function Home() {
      <Herobannertoplayer/>
      <HeroBanner/>
     <Services />
+    <Portfolio/>
       
     </div>
   )
