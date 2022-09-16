@@ -22,11 +22,11 @@ export default function HeroBanner() {
             if (!node.isMesh) return;
 
             node.material.wireframe = true;
-            node.material.color = new THREE.Color(0x0000ff)
+            node.material.color = new THREE.Color(0xf75c03)
           });
           gltf.scene.scale.set(3, 3, 3)
           modelGroup.add(gltf.scene)
-          var object = gltf.scene
+          
           const model = gltf.scene.clone();
           model.applyMatrix4(new THREE.Matrix4().makeScale(-1, 1, 1));
           
@@ -51,17 +51,29 @@ export default function HeroBanner() {
       const directionlLight = new THREE.DirectionalLight('white', 2)
       directionlLight.lookAt(modelGroup)
       scene.add(directionlLight,modelGroup)
+      //hempisphere light
+      const hlight=new THREE.HemisphereLight(0xd90368, 0x64a6bd, 2)
+      modelGroup.add(hlight)
+
       //Camera
 
 
     const camera = new THREE.PerspectiveCamera(75, size.width / size.height)
-    camera.position.z = 15
+
+    if(window.innerWidth<568)
+    {
+      camera.position.z = 25
+
+    }
+    else{
+      camera.position.z=15
+    }
 
     scene.add(camera)
 
     //Renderer
 
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
     renderer.setSize(size.width, size.height);
     renderer.setPixelRatio(Math.min(2, window.devicePixelRatio))
     renderer.setClearColor(0x000000)
@@ -79,6 +91,16 @@ export default function HeroBanner() {
       modelGroup.position.x = ((event.clientX / window.innerWidth) - 0.5) * 15;
       modelGroup.position.y = ((event.clientY / window.innerHeight) - 0.5) * -15;
     });
+
+    //Make model follow finger on touch screens
+
+    window.addEventListener('touchmove',(event)=>{
+      modelGroup.rotation.y = (event.touches[0].clientX / window.innerWidth) - 0.5;
+      modelGroup.rotation.x = (event.touches[0].clientY / window.innerHeight) - 0.5;
+
+      modelGroup.position.x = ((event.touches[0].clientX / window.innerWidth) - 0.5) * 15;
+      modelGroup.position.y = ((event.touches[0].clientY / window.innerHeight) - 0.5) * -15;
+    })
 
     //Resize reference on window size change
 

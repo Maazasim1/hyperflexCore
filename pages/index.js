@@ -12,6 +12,7 @@ export default function Home() {
         <title>Hyperflex Core</title>
         <link rel="icon" href="/favicon.png"/>
         <meta name="description" content="This is the website for Hyperflex Core we are a software development company and provide it consultancy and business solutions like automation,websites,webapps,next js applications,react applications,machine learning models,cross platform apps and data science services"/>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
      <Progress/>
      <Navbar/>

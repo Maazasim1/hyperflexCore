@@ -31,7 +31,7 @@ export default function Navbar() {
                         <a href='#Clients' className='pt-4 pl-5 font-poppins font-extrabold'>
                             CLIENTS
                         </a>
-                        <a href='#Consultation' className='bg-gradient-to-r from-orange-500 to-blue-700 p-4 ml-14  rounded-md text-white font-poppins font-bold'>
+                        <a href='#Consultation' className=' bg-gradient-to-r from-orange-500 to-blue-700 p-4 ml-14  rounded-md text-white font-mono font-bold'>
                             Book Free Consultation
                         </a>
 

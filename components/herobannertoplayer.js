@@ -43,7 +43,7 @@ export default function Herobannertoplayer() {
             </ul>
                 </div>
                 <div className='flex space-x-10 pt-36'>
-                    <button className='bg-gradient-to-r from-orange-500 to-blue-700 p-5 rounded-lg text-white'>Book Free Consultation</button>
+                    <button className='font-mono bg-gradient-to-r from-orange-500 to-blue-700 p-5 rounded-lg text-white'>Book Free Consultation</button>
                     
 
                 </div>

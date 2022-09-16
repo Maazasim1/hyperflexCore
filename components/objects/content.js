@@ -1,3 +1,4 @@
 export const Content={
     website:"You need a website. It's an essential part of your business and marketing strategy. We have the skillset, experience, and industry insight to develop a website that will grow your business. Whether you're looking for a complete website redesign or just updates to your current site, we can deliver at all levels of complexity.",
+    app:"Do you have an idea for that mobile application but need help developing it? With our in-house app developers, we can make your idea a reality. We'll work with you to define the features and design, and then we'll build it. And if your app is successful, we'll help you monetize it."
 }
