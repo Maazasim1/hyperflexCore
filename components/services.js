@@ -1,8 +1,8 @@
 import React from 'react'
 import { Content } from './objects/content'
 import Image from 'next/image'
-import {motion} from 'framer-motion'
-import Showcase from './showcase'
+import {motion} from 'framer-motion';
+import Showcase from './showcase';
 export default function Services() {
     return (
         <div id='Services' className=''>
