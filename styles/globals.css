@@ -8,8 +8,9 @@
   }
 
   body {
-    color: white;
-    background: black;
+    color: #ebebeb;
+    background: #252525;
+    
   }
 
   .progress-bar {

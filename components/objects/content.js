@@ -2,6 +2,8 @@ export const Content={
     website:"You need a website. It's an essential part of your business and marketing strategy. We have the skillset, experience, and industry insight to develop a website that will grow your business. Whether you're looking for a complete website redesign or just updates to your current site, we can deliver at all levels of complexity.",
     app:"Do you have an idea for that mobile application but need help developing it? With our in-house app developers, we can make your idea a reality. We'll work with you to define the features and design, and then we'll build it. And if your app is successful, we'll help you monetize it.",
     machineLearningDatascience:"We are a team of machine learning experts that can help you make better decisions, create personalized offers and deliver tailored marketing messages. We automate data-intensive tasks and implement solutions that scale. Our expertise in machine learning allows us to analyze data for better insights and business outcomes.",
-    automation:"Your business is important. We make it our priority. We're a team of software developers and automation professionals who have made it our mission to automate the tedious and mundane tasks that are holding your business back."
+    automation:"Your business is important. We make it our priority. We're a team of software developers and automation professionals who have made it our mission to automate the tedious and mundane tasks that are holding your business back.",
+    carcleaners:"This is a car cleaning service which uses the website give users the functionality to book orders after which the people at car cleaners come to your doorstep to provide car cleaning services.",
+    adlibitum:'Adlibitum is basically a trading company, operating in corporate sector supplying consumer Electronics, mobile communications, home and kitchen appliances, office equipment, LED lights, and power supply products'
 
 }
