@@ -8,6 +8,7 @@ import Services from "../components/services"
 import Portfolio from "../components/portfolio"
 import Clients from "../components/clients"
 import Footer from "../components/footer"
+import Executives from "../components/executives"
 export default function Home() {
   return (
     <div className="">
@@ -25,6 +26,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <Clients />
+      <Executives />
       <Footer />
 
     </div>

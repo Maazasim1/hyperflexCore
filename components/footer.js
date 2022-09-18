@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 
 export default function Footer() {
     return (
@@ -24,6 +25,9 @@ export default function Footer() {
                         </Link>
 
 
+                    </div>
+                    <div className='overflow-hidden'>
+                        <Image src='/images/map.webp' height={1000} width={1050} />
                     </div>
                     <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
