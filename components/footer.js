@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Footer() {
     return (
         <div >
-            <footer className="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
+            <footer className="p-4 bg-zinc-800 rounded-lg shadow md:px-6 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
 
 
@@ -26,10 +26,14 @@ export default function Footer() {
 
 
                     </div>
-                    <div className='overflow-hidden'>
-                        <Image src='/images/map.webp' height={1000} width={1050} />
+                    <div className='overflow-hidden flex-shrink-0'>
+                        <Image alt='picture of a map showing current location of company' src='/images/map.webp' height={600} width={650} />
                     </div>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+                        <span className="flex h-3 w-3 relative -top-[4.5rem] right-[13.2rem] z-50">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                        </span>
+                    <ul className="flex flex-wrap items-center mb-6 text-sm  sm:mb-0 text-gray-400">
                         <li>
                             <Link href='#Services'>
                                 <a className="mr-4 hover:underline md:mr-6 ">Services</a>
@@ -47,8 +51,8 @@ export default function Footer() {
                         </li>
                     </ul>
                 </div>
-                <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <Link href="https://hyperflexcore.com/"><a className="hover:underline">Hyperflex Core™</a></Link>. All Rights Reserved.
+                <hr className="my-6  sm:mx-auto border-gray-700 lg:my-8" />
+                <span className="block text-sm  sm:text-center text-gray-400">© 2022 <Link href="https://hyperflexcore.com/"><a className="hover:underline">Hyperflex Core™</a></Link>. All Rights Reserved.
                 </span>
             </footer>
         </div>

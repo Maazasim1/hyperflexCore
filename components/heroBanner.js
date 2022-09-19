@@ -6,6 +6,7 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 export default function HeroBanner() {
   const mountRef = useRef();
   useEffect(() => {
+    const mount=mountRef.current
     const modelGroup = new THREE.Group();
 
     const loader = new GLTFLoader();
@@ -79,7 +80,7 @@ export default function HeroBanner() {
     renderer.setClearColor(0x000000)
 
 
-    mountRef.current.appendChild(renderer.domElement);
+    mount.appendChild(renderer.domElement);
 
   
 
@@ -129,7 +130,7 @@ export default function HeroBanner() {
     tick()
 
 
-    return () => mountRef.current.removeChild(renderer.domElement);
+    return () => mount.removeChild(renderer.domElement);
 
 
   }, [])
