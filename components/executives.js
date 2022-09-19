@@ -14,7 +14,7 @@ export default function Executives() {
                 <h2 className='font-poppins font-extrabold text-2xl pb-5 text-orange-600'>CO FOUNDER</h2>
                 <p className='font-poppins text-zinc-400 font-extralight'>At Hyperflex-Core, we see digital solutions as a means to improve all areas of our lives. We strive to deliver the best results for our customers, make a big difference in our digital services, and provide maximum ease of use.
 
-Our approach is simple. We focus on listening to our clients' needs and ideas, providing strategic and people-centered advice to improve their ideas, and delivering the highest quality results.
+Our approach is simple. We focus on listening to our clients needs and ideas, providing strategic and people-centered advice to improve their ideas, and delivering the highest quality results.
 
 Ultimately, we are your trusted partner. Avoid unnecessary technical details. We act as a reassuring link between your software and your business. Bring your organization closer to your customers through advanced digitization.</p>
             </div>

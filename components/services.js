@@ -8,10 +8,10 @@ export default function Services() {
         <div id='Services' className=''>
 
             <div className="flex justify-center sm:flex-row flex-col ">
-                <div className='sm:px-36 pt-36 sm:pr-20 p-10'>
-                    <h1 className="pb-10 sm:text-left text-center text-white font-poppins text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-white ">SERVICES</h1>
-                    <h2 className='pb-10 sm:text-left text-white font-poppins text-5xl font-bold'>Web Development</h2>
-                    <p className="font-poppins text-[20px] font-semibold text-center sm:text-left ">
+                <div className='sm:px-36 pt-36 sm:pr-20 p-12'>
+                    <h1 className="pb-10 sm:text-left text-center text-white font-poppins text-5xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-white ">SERVICES</h1>
+                    <h2 className='pb-10 sm:text-left text-white font-poppins text-4xl sm:text-5xl font-bold'>Web Development</h2>
+                    <p className="font-poppins text-[15px] sm:text-[20px] font-semibold text-left ">
                         {Content.website}
                     </p>
                 </div>

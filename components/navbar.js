@@ -10,7 +10,7 @@ export default function Navbar() {
         <>
         <FormModal show={show} setShow={setShow} />
             <div>
-                <div className='fixed top-0 w-full z-50'>
+                <div className='sm:fixed hidden top-0 w-full z-50'>
 
                     <div className="w-[100vw] flex flex-row p-10 px-16 sticky z-50">
                         <div className='flex justify-start flex-grow'>
@@ -29,15 +29,15 @@ export default function Navbar() {
                         <div className='flex justify-end'>
                             <Link href='#Services'>
 
-                                <a className='pt-4 pl-5 font-poppins font-extrabold cursor-pointer'>
+                                <a className='pt-4 pl-5 font-poppins font-extrabold cursor-pointer sm:inline-block hidden'>
                                     SERVICES
                                 </a>
 
                             </Link>
-                            <a href='#Portfolio' className='pt-4 pl-5 font-poppins font-extrabold'>
+                            <a href='#Portfolio' className='pt-4 pl-5 font-poppins font-extrabold sm:inline-block hidden'>
                                 PORTFOLIO
                             </a>
-                            <a href='#Clients' className='pt-4 pl-5 font-poppins font-extrabold'>
+                            <a href='#Clients' className='pt-4 pl-5 font-poppins font-extrabold sm:inline-block hidden'>
                                 CLIENTS
                             </a>
                             <button onClick={()=>setShow(!show)} className=' bg-gradient-to-r from-orange-500 to-blue-700 p-4 ml-14  rounded-md text-white font-mono font-bold'>
@@ -52,7 +52,7 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                <span className="flex h-3 w-3 fixed top-9 right-11 z-50">
+                <span className="sm:flex hidden h-3 w-3 fixed top-9 right-11 z-50">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
                 </span>

@@ -23,7 +23,7 @@ export default function Herobannertoplayer() {
     return (
         <>
             <FormModal show={show} setShow={setShow} />
-            <div className='z-10 font-poppins justify-center font-extrabold text-left items-center  w-full h-full relative pt-56 pl-32'>
+            <div className='z-10 font-poppins justify-center font-extrabold text-left items-center  w-full h-full relative sm:pt-56 sm:pl-32 p-10'>
                 <h1 className='text-white text-6xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-blue-700'>
                     A Glimpse Into The Future,
                 </h1>
@@ -47,7 +47,7 @@ export default function Herobannertoplayer() {
                         }
                     </ul>
                 </div>
-                <div className='flex space-x-10 pt-36'>
+                <div className='flex sm:space-x-10 pt-36'>
                     <button className='font-mono bg-gradient-to-r from-orange-500 to-blue-700 p-5 rounded-lg text-white' onClick={() => setShow(!show)}>Book Free Consultation</button>
 
 
