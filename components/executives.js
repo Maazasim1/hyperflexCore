@@ -2,14 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 export default function Executives() {
   return (
-    <div className='p-32'>
-        <h1 className="pb-16 sm:text-left text-center text-white font-poppins text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-white ">LEADERSHIP BOARD</h1>
-        <div className='flex flex-row justify-center space-x-7 pb-24'>
+    <div className='sm:p-32 p-10'>
+        <h1 className="pb-16 text-left  text-white font-poppins text-4xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-white ">LEADERSHIP BOARD</h1>
+        <div className='flex sm:flex-row flex-col justify-center space-y-6 sm:space-x-7 pb-24'>
             <div className='self-center rounded-full overflow-hidden w-[40vh] border-solid border-[#222] border-[10px] bg-[#ccc] height-[50vh]'>
                 <Image alt='maaz asim co founder picture' width={300} height={300} objectFit='fill' src="/images/maaz_exec.webp"></Image>
 
             </div>
-            <div className='w-[50vw]'>
+            <div className='sm:w-[50vw] '>
                 <h1 className='font-poppins font-extrabold text-5xl pb-5 '>MAAZ ASIM</h1>
                 <h2 className='font-poppins font-extrabold text-2xl pb-5 text-orange-600'>CO FOUNDER</h2>
                 <p className='font-poppins text-zinc-400 font-extralight'>At Hyperflex-Core, we see digital solutions as a means to improve all areas of our lives. We strive to deliver the best results for our customers, make a big difference in our digital services, and provide maximum ease of use.
@@ -21,8 +21,8 @@ Ultimately, we are your trusted partner. Avoid unnecessary technical details. We
 
         </div>
         
-        <div className='flex flex-row justify-center space-x-7'>
-            <div className='w-[50vw]'>
+        <div className='flex sm:flex-row flex-col-reverse justify-center space-y-6 sm:space-x-7'>
+            <div className='sm:w-[50vw]'>
                 <h1 className='font-poppins font-extrabold text-5xl pb-5 '>SALMAAN ALI</h1>
                 <h2 className='font-poppins font-extrabold text-2xl pb-5 text-orange-600'>CO FOUNDER</h2>
                 <p className='font-poppins text-zinc-400 font-extralight'>I founded Hyperflex Core with a clear goal. It is a company that brings software and people closer by developing solutions optimized for ease of use. It facilitates any task or process, requirement or problem.

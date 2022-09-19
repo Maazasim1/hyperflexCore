@@ -9,7 +9,7 @@ export default function Showcase(props) {
 
 
   return (
-   <div className="p-20 pt-25">   
+   <div className="sm:p-20 px-5 sm:pt-25 sm:block hidden">   
       <motion.div initial={{opacity:0}} whileInView={{opacity:1,transition:{duration:1}}} className="grid justify-center">
 
       <div className="grid grid-cols-1 row-start-1 col-start-1">

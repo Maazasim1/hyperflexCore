@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import FormModal from './formModal';
+import FormModal from './formmodal';
 export default function Herobannertoplayer() {
     const [show, setShow] = useState(false);
 
@@ -23,8 +23,8 @@ export default function Herobannertoplayer() {
     return (
         <>
             <FormModal show={show} setShow={setShow} />
-            <div className='z-10 font-poppins justify-center font-extrabold text-left items-center  w-full h-full relative sm:pt-56 sm:pl-32 p-10'>
-                <h1 className='text-white text-6xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-blue-700'>
+            <div className='z-10 font-poppins justify-center font-extrabold text-left items-center  w-full h-full relative sm:pt-56 sm:pl-32 pt-5 p-5'>
+                <h1 className='text-white text-[15vw] leading-none  sm:text-6xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-blue-700'>
                     A Glimpse Into The Future,
                 </h1>
                 <div className='mt-10 text-4xl h-10 overflow-hidden'>

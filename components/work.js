@@ -1,13 +1,13 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import { Content } from './objects/content'
+
 import Image from 'next/image'
 export default function Work(props) {
   return (
     <div className='pt-20'>
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 } }} className='block'>
         <div className='relative'>
-          <div className='relative shadow-2xl shadow-gray-700  rounded-3xl overflow-hidden'>
+          <div className='relative sm:w-auto sm:h-auto w-[74vw]  shadow-2xl shadow-gray-700  rounded-3xl overflow-hidden'>
             <Image alt='this image shows previous work' src={props.mainImageUrl} width={1366} height={768} />
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function Work(props) {
               <p className='text-[20px] font-poppins font-extrabold uppercase text-gray-400'>Technologies <span className='text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-blue-600'>{props.tech}</span></p>
             </div>
           </div>
-          <div className='overflow-hidden flex-grow'>
+          <div className='overflow-hidden flex-grow sm:block hidden'>
             <Image alt='previous work for mobile devices' src={props.secondImageUrl} width={700} height={700} />
           </div>
 

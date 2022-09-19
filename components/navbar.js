@@ -10,7 +10,7 @@ export default function Navbar() {
         <>
         <FormModal show={show} setShow={setShow} />
             <div>
-                <div className='sm:fixed hidden top-0 w-full z-50'>
+                <div className='fixed sm:block hidden top-0 w-full z-50'>
 
                     <div className="w-[100vw] flex flex-row p-10 px-16 sticky z-50">
                         <div className='flex justify-start flex-grow'>

@@ -11,7 +11,7 @@ export default function Footer() {
 
 
                     <div className='p-32'>
-                        <h1 className=' font-poppins font-extrabold text-3xl pb-3'>
+                        <h1 className=' font-poppins font-extrabold sm:text-3xl pb-3'>
                             Karachi,Pakistan
                         </h1>
                         <p className='font-poppins font-bold'>
