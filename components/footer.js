@@ -15,12 +15,12 @@ export default function Footer() {
                             Karachi,Pakistan
                         </h1>
                         <p className='font-poppins font-bold'>
-                            +92 311 2286006
+                            +92 336 2609740
 
                         </p>
-                        <Link href='mailto:mazzasimq1@gmail.com'>
+                        <Link href='mailto:hyperflexcore@gmail.com'>
                             <a className='hover:text-orange-600'>
-                                mazzasimq1@gmail.com
+                                hyperflexcore@gmail.com
                             </a>
                         </Link>
 

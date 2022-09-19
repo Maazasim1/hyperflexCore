@@ -23,7 +23,7 @@ Ultimately, we are your trusted partner. Avoid unnecessary technical details. We
         
         <div className='flex sm:flex-row flex-col-reverse justify-center space-y-6 sm:space-x-7'>
             <div className='sm:w-[50vw]'>
-                <h1 className='font-poppins font-extrabold text-5xl pb-5 '>SALMAAN ALI</h1>
+                <h1 className='font-poppins font-extrabold text-5xl pb-5 '>SYED SALMAN ALI</h1>
                 <h2 className='font-poppins font-extrabold text-2xl pb-5 text-orange-600'>CO FOUNDER</h2>
                 <p className='font-poppins text-zinc-400 font-extralight'>I founded Hyperflex Core with a clear goal. It is a company that brings software and people closer by developing solutions optimized for ease of use. It facilitates any task or process, requirement or problem.
 Having worked in the smart user IT field for many years, I always envisioned what I would like my software to look like if I were the user. This allowed me to align my design thinking with the user's point of view. My goal has always been to create the most efficient, easy to use and aesthetically pleasing software solutions.

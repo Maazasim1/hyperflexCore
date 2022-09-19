@@ -11,7 +11,7 @@ export default function Sidebar() {
             LINKEDIN
             </a>
         </Link>
-        <Link href="mailto:mazzasimq1@gmail.com" >
+        <Link href="mailto:hyperflexcore@gmail.com" >
             <a target='_blank' className='text-xs hover:bg-white p-2 hover:text-black'>
             EMAIL
             </a>
