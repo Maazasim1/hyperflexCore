@@ -15,7 +15,7 @@ export default function Footer() {
                             Karachi,Pakistan
                         </h1>
                         <p className='font-poppins font-bold'>
-                            +92 336 2609740
+                            +92 311 2286006
 
                         </p>
                         <Link href='mailto:hyperflexcore@gmail.com'>
