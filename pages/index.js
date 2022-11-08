@@ -17,6 +17,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
         <meta name="description" content="This is the website for Hyperflex Core we are a software development company and provide it consultancy and business solutions like automation,websites,webapps,next js applications,react applications,machine learning models,cross platform apps and data science services" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HCF5ENS4Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6HCF5ENS4Y');
+</script>
       </Head>
       <Progress />
       <Navbar />
