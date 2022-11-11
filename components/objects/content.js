@@ -4,6 +4,6 @@ export const Content={
     machineLearningDatascience:"We are a team of machine learning experts that can help you make better decisions, create personalized offers and deliver tailored marketing messages. We automate data-intensive tasks and implement solutions that scale. Our expertise in machine learning allows us to analyze data for better insights and business outcomes.",
     automation:"Your business is important. We make it our priority. We're a team of software developers and automation professionals who have made it our mission to automate the tedious and mundane tasks that are holding your business back.",
     carcleaners:"This is a car cleaning service which uses the website give users the functionality to book orders after which the people at car cleaners come to your doorstep to provide car cleaning services.",
-    adlibitum:'Adlibitum is basically a trading company, operating in corporate sector supplying consumer Electronics, mobile communications, home and kitchen appliances, office equipment, LED lights, and power supply products'
-
+    adlibitum:'Adlibitum is basically a trading company, operating in corporate sector supplying consumer Electronics, mobile communications, home and kitchen appliances, office equipment, LED lights, and power supply products',
+    mechanic4u:"Mechanic4u.pk is a car care service company that brings the workshop on wheels to your doorstep because what we do is ART As one of the first door to door vehicle service enterprises,we effort to preserve a standard with greater skills and steadfast consumer care.We target to deliver our customers with the maximus user friendly automotive experience so that all your vehicle service n maintenance need are well taken care of without any disturbance"
 }
